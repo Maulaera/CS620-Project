@@ -5,6 +5,12 @@ CS620 Introduction to Data Science and Analytics
 Dr Dushan Wadduwage
 
 ## Project: Analysis of University Admissions 
+
+Maulahna Robinson | mrobi021@odu.edu | https://maulaera.github.io/
+
+
+Makendra Crosby | mcros008@odu.edu | https://mcros008.github.io/my-website/
+
 <u>*Project Idea*</u>
 
 Our project will involve analyzing university admissions. We will collect data regarding test score requirements, GPAs, demographics, and admission rates. With this data, we will analyze different trends between colleges regarded as Ivy League and typical four-year colleges.
