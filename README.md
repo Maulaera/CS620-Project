@@ -17,7 +17,7 @@ Our project will involve analyzing university admissions. We will collect data r
 
 Along with that analysis, we will construct a program that takes inputted student statistics and outputs an estimated probability of getting accepted into a difficult school and which areas to focus on for improvement.
 
-<u>*Sprints*</u>
+*Sprints*
 
 We will keep track of our work using a simple sprint goal chart. Each sprint includes what we want to accomplish and the deadline the sprint will finish. We have also decided to use GitHub and VSCode for the creation of our visualizations and program, as we are the most comfortable and familiar with these tools. We will continue to reference back to this Google Colab for updates and sprint tracking.
 
@@ -33,4 +33,6 @@ Sprint 3 - April 27th - Finish Program and Final Report.
 The full project abstract can be found below:
 
 https://colab.research.google.com/drive/1DNqGYxJcCw4VWQWP8K9AvHZ-hIFzlquH?authuser=1
+
+DATASETS: https://docs.google.com/document/d/1bHXVBMe0LFvEo8ioNWgR3Ah-n1Hul6xsxlz49EjOybE/edit?usp=sharing
 
