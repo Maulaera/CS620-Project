@@ -1,5 +1,5 @@
 # Maulahna Robinson
-# Makendra McCrosby
+# Makendra Crosby
 # CS620
 
 import pandas as pd
