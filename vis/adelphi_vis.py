@@ -23,8 +23,11 @@ y = pd.to_numeric(y, errors='coerce')
 
 plt.bar(x,y) # Bar Chart
 
+plt.bar(x, y, color='purple') #changing the color of the chart to purple to make more readable.
+
 plt.xlabel('Student Ethnicities')
 plt.ylabel('Percentage')
 plt.title('Adelphi Admissions by Ethnicity')
+plt.xticks(rotation=45, ha="right", fontsize=10) #fixing x-axis labels so they don't overlap. 
 
 plt.show()
