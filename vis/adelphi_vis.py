@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the Excel file
-file_path = "data/Adelphi University Class of 2024 (2).xlsx"
+file_path = "data/Adelphi University Class of 2024.xlsx"
 df = pd.read_excel(file_path)
 
 print(df.columns)
