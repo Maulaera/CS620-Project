@@ -1,6 +1,7 @@
 # Maulahna Robinson
 # Makendra Crosby
 # CS620
+# Note: 72.8% acceptance rate (easy acceptance)
 
 import pandas as pd
 import matplotlib.pyplot as plt
