@@ -37,6 +37,8 @@ axes[2].set_xlabel('Ivy League Universities')
 axes[2].set_ylabel('GPA')
 axes[2].tick_params(axis='x', rotation=45)
 
+fig.suptitle("Average Ivy League Admissions - SAT, ACT & GPA Statistics ", fontsize=14, fontweight='bold')
+
 # Adjust layout and display
 plt.tight_layout()
 plt.show()
