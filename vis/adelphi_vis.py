@@ -5,30 +5,48 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Load the Excel file
 file_path = "data/Adelphi University Class of 2024.xlsx"
-df = pd.read_excel(file_path)
+df = pd.read_excel(file_path) 
 
-# print(df.columns) (THIS WAS TO MAKE SURE THE DATA WAS BEING READ CORRECTLY)
+mean_sat_reading = df.loc[df.iloc[:, 0] == "Mean SAT Evidence-based Reading and Writing"].iloc[0, 1]
+mean_sat_math = df.loc[df.iloc[:, 0] == "Mean SAT Math"].iloc[0, 1]
+mean_total_sat = df.loc[df.iloc[:, 0] == "Mean total SAT"].iloc[0, 1]
+mean_gpa = df.loc[df.iloc[:, 0] == "Mean high school GPA"].iloc[0, 1]
+
+mean_sat_reading = float(mean_sat_reading)
+mean_sat_math = float(mean_sat_math)
+mean_total_sat = float(mean_total_sat)
+mean_gpa = float(mean_gpa)
+
+sat_categories = ["SAT Reading", "SAT Math", "Total SAT"]
+sat_values = [mean_sat_reading, mean_sat_math, mean_total_sat]
 
 
-x = df['Ethnicity']
-y = df['New First-Year Students']
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
-# print(f"Length of ethnin: {len(x)}") (THIS WAS FOR DEBUGGING AND TESTING)
-# print(f"Length of percen: {len(y)}") (THIS WAS FOR DEBUGGING AND TESTING)
+#SAT Scores
+sns.barplot(x=sat_categories, y=sat_values, palette="viridis", ax=axes[0])
+# axes[0].set_xlabel("")
+axes[0].set_ylabel("Score")
+axes[0].set_title("Average SAT Scores")
+axes[0].set_ylim(0, 1600)  # ✅ Extend y-axis to 1600
 
-y = y.astype(str).str.rstrip('%')
-y = pd.to_numeric(y, errors='coerce')
+# Add values on bars
+for i, v in enumerate(sat_values):
+    axes[0].text(i, v + 30, str(v), ha='center', fontsize=12)  # Adjust text placement
 
-plt.bar(x,y) # Bar Chart
+# GPA
+axes[1].bar(["Admitted Freshmen"], [mean_gpa], color="teal")
+# axes[1].set_xlabel("Admitted Freshmen")
+axes[1].set_ylabel("Score")
+axes[1].set_title("Average High School GPA")
+axes[1].set_ylim(0, 4.0)  # ✅ Extend y-axis to 4.0
+axes[1].text(0, mean_gpa + 0.1, str(mean_gpa), ha='center', fontsize=12)  # Adjust text placement
 
-plt.bar(x, y, color='purple') #changing the color of the chart to purple to make more readable.
+fig.suptitle("Adelphi University Class of 2024 - SAT & GPA Statistics", fontsize=14, fontweight='bold')
 
-plt.xlabel('Student Ethnicities')
-plt.ylabel('Percentage')
-plt.title('Adelphi Admissions by Ethnicity')
-plt.xticks(rotation=45, ha="right", fontsize=10) #fixing x-axis labels so they don't overlap. 
-
+plt.tight_layout()
 plt.show()
