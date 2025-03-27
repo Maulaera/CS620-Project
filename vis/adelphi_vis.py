@@ -32,8 +32,7 @@ sns.barplot(x=sat_categories, y=sat_values, palette="viridis", ax=axes[0])
 # axes[0].set_xlabel("")
 axes[0].set_ylabel("Score")
 axes[0].set_title("Average SAT Scores")
-axes[0].set_ylim(0, 1600)  # ✅ Extend y-axis to 1600
-
+axes[0].set_ylim(0, 1600)  
 # Add values on bars
 for i, v in enumerate(sat_values):
     axes[0].text(i, v + 30, str(v), ha='center', fontsize=12)  # Adjust text placement
@@ -43,7 +42,7 @@ axes[1].bar(["Admitted Freshmen"], [mean_gpa], color="teal")
 # axes[1].set_xlabel("Admitted Freshmen")
 axes[1].set_ylabel("GPA")
 axes[1].set_title("Average High School GPA")
-axes[1].set_ylim(0, 4.0)  # ✅ Extend y-axis to 4.0
+axes[1].set_ylim(0, 4.0)  
 axes[1].text(0, mean_gpa + 0.1, str(mean_gpa), ha='center', fontsize=12)  # Adjust text placement
 
 fig.suptitle("Adelphi University Class of 2024 - SAT & GPA Statistics", fontsize=14, fontweight='bold')
