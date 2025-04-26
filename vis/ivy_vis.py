@@ -10,7 +10,7 @@ df = pd.read_excel(file_path)
 
 # print(df.columns) {this was for debugging}
 
-# Clean the SAT and ACT columns (handling ranges like '1470-1560')
+# Score range handling
 df['Average SAT score'] = df['Average SAT score'].astype(str).apply(lambda x: sum(map(int, x.split('-'))) / 2 if '-' in x else float(x))
 df['Average ACT Score'] = df['Average ACT Score'].astype(str).apply(lambda x: sum(map(int, x.split('-'))) / 2 if '-' in x else float(x))
 
